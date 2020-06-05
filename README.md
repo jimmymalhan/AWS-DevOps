@@ -1,3 +1,3 @@
 ## AWS Infrastructure Scripts
 
-* Projects are listed in the folder.
+``` -> Projects are listed in the folder <- ```
