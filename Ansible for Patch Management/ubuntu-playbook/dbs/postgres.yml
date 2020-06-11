@@ -1,0 +1,43 @@
+---
+- hosts: database
+  become: true
+  vars:
+    ansible_user: ubuntu
+  tasks:
+  - name: ensure postgresql is at the latest version
+    apt:
+      name: postgresql
+      state: latest
+      update_cache: yes
+
+  - name: ensure that postgresql is starting after updating
+    service:
+      name: postgresql
+      state: started
+      enabled: yes
+
+- hosts: database
+  become: true
+  vars:
+    ansible_user: ubuntu
+  tasks:
+    - service: name=postgresql state=stopped
+    - wait_for: port=5432 state=stopped
+
+- hosts: database
+  become: true
+  vars:
+    ansible_user: ubuntu
+  tasks:
+    - service: name=postgresql state=restarted
+    - wait_for: port=5432 state=started
+
+- hosts: database
+  become: true
+  vars:
+    ansible_user: ubuntu
+  tasks:
+    - service: name=postgresql state=started
+    - wait_for: port=5432
+
+

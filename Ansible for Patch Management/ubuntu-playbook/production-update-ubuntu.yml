@@ -1,0 +1,127 @@
+---
+- hosts: ubuntu
+  become: true
+  any_errors_fatal: true
+  serial: 1
+  max_fail_percentage: 200
+  ignore_errors: true
+  gather_facts: false
+  ignore_unreachable: true
+  vars:
+    ansible_user: ubuntu
+  tasks:
+#ensuring latest package lists are updated from repository
+    - name: Updating the packages
+      apt:
+        install_recommends: yes
+        force_apt_get: yes
+        only_upgrade: yes
+        update-cache: yes
+      changed_when: 0
+      register: upgrade_output
+
+# get a list of packages that have updates
+    - name: get list of pending upgrades
+      command: apt-get --simulate dist-upgrade
+      args:
+        warn: false # don't warn us about apt having its own plugin
+      register: apt_simulate
+      changed_when: 0
+
+    - name: Update cache
+      apt:
+        update-cache: yes
+      changed_when: false
+
+    - name: Fetch package list of updates
+      command: apt list --upgradable
+      register: aptlist
+    - set_fact:
+        updates: "{{ aptlist.stdout_lines | difference(['Listing...'])
+| map('regex_replace', '^(.*?)/(.*)', '\\1') | list }}"
+
+    - debug: var=updates
+
+# tell user about packages being updated
+    - name: show pending updates
+      debug:
+        var: updates
+      when: updates.0 is defined
+
+# running package ack each server update with a prompt
+    - pause:
+         seconds: 15
+      when: updates.0 is defined
+
+# do the actual apt-get dist-upgrade
+    - name: apt-get dist-upgrade
+      apt:
+        upgrade: dist
+      register: upgrade_output
+
+# if a new kernel is incoming, remove old ones to avoid full /boot
+    - name: apt-get autoremove
+      command: apt-get -y autoremove
+      args:
+        warn: false
+      when: upgrade_output is changed
+      changed_when: 0
+
+# Checks any dependency problem of package in the OS
+#   -  name: checks for dependency problem of the package on the OS
+#      dpkg_options: 'force-confold,force-confdef'
+#     args:
+#       warn: false
+#     when: upgrade_output is changed
+#     changed_when: 0
+
+# fix any dependency problems in the OS
+    - name: fix dependency problems
+      command: apt-get -f install
+      args:
+        warn: false
+      when: upgrade_output is changed
+      changed_when: 0
+
+#clean unnecessary dependencies on the updates
+    - name: cleaning unnecessary dependencies
+      apt:
+        autoclean: yes
+      args:
+        warn: false
+      when: upgrade_output is changed
+      changed_when: 0
+
+    - name: Remove dependencies that are no longer required
+      apt:
+        autoremove: yes
+
+#rebooot if required
+    - name: reboot node
+      shell: sleep 2 && shutdown -r now "Reboot triggered by ansible"
+      async: 90
+      poll: 5
+      ignore_errors: true
+      when: updates.0 is defined
+
+# poll ssh port until we get a tcp connect
+    - name: wait for node to finish booting
+      become: false
+      local_action: wait_for host=ubuntu
+          port=22
+          state=started
+          delay=5
+          timeout=600
+      when: updates.0 is defined
+
+# give sshd time to start fully
+    - name: wait for ssh to start fully
+      pause:
+        seconds: 15
+      when: updates.0 is defined
+
+# wait a few minutes between hosts, unless we're on the last
+    - name: waiting between hosts
+      pause:
+        seconds: 600
+      when: upgrade_output is changed

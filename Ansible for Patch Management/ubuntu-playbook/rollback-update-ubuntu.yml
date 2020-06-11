@@ -1,0 +1,58 @@
+---
+- hosts: ubuntu
+  become: true
+  any_errors_fatal: true
+  serial: 1
+  max_fail_percentage: 0
+  vars:
+    ansible_user: ubuntu
+    state: absent
+  tasks:
+#check of the package is held by package manager
+    - name: check if the package is held
+      command: apt-get -u dist-upgrade
+      changed_when: 0
+
+    - name: Update cache
+      apt:
+        update-cache: yes
+      changed_when: false
+#specify the package to remove it
+#   - name: removing specified package
+#     command: apt-get remove -dry-run packagename
+#     apt:
+#       update-cache: yes
+#specify the package to remove it
+#   - name: removing specified package
+#     command: apt-get purge remove packagename
+#     apt:
+#       update-cache: yes
+
+    - name: reboot node
+      shell: sleep 2 && shutdown -r now "Reboot triggered by ansible"
+      async: 90
+      poll: 5
+      ignore_errors: true
+      when: updates.0 is defined
+
+    # poll ssh port until we get a tcp connect
+    - name: wait for node to finish booting
+      become: false
+      local_action: wait_for host=ubuntu
+          port=22
+          state=started
+          delay=5
+          timeout=600
+      when: updates.0 is defined
+
+    # give sshd time to start fully
+    - name: wait for ssh to start fully
+      pause:
+        seconds: 15
+      when: updates.0 is defined
+
+    # wait a few minutes between hosts, unless we're on the last
+    - name: waiting between hosts
+      pause:
+        seconds: 600
+      when: upgrade_output is changed

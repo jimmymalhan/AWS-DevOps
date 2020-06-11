@@ -1,0 +1,65 @@
+---
+- hosts: windows
+  vars:
+    ansible_connection: winrm
+    ansible_ssh_port: 5986
+    anisble_winrm_transport: kerberos
+    ansible_winrm_server_cert_validation: ignore
+    validate_certs: false
+    ansible_winrm_scheme: https
+    ansibe_winrm_read_timeout_sec: 30
+    win_updates:
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
+      - Definition Updates
+      - Updates
+      - Windows Server 2016
+      - Windows Defender
+      - Feature Packs
+      - Silverlight
+      - Realtek Semiconductor Corp. - Extension - 10.0.17134.1
+    state: absent
+  tasks:
+   - name: Searching updates ???
+     win_updates:
+       state: searched
+       catagory_names: "{{ win_updates }}"
+     register: update_count
+     ignore_errors: yes
+
+   - name: reboot if required
+     win_reboot:
+     when: update_count.reboot_required
+     ignore_errors: yes
+
+   - name: Install customized updates as required for MedQIA
+     win_updates:
+       category_names: "{{ win_updates }}"
+       whitelist:
+        - KB4056892
+        - KB4073117
+        - KB2267602
+        - KB4494452
+        - KB4534307
+        - KB4481252
+        - KB4532938
+        - KB4528760
+       register: update_result
+       reboot: yes
+
+   - name: updating drivers on updates
+     win_updates:
+       catagory_names: "{{ win_updates }}"
+       reboot: yes
+     register: update_result
+
+   - name: Ensure WinRM starts when the system has settled and is ready to work reliably
+     win_service:
+       name: WinRM
+       start_mode: delayed
+
+   - name: Ensure we wait long enough for the updates to be applied during reboot
+     win_updates:
+       reboot: yes
+       reboot_timeout: 3600

@@ -1,0 +1,30 @@
+---
+- hosts: windows
+  vars:
+    ansible_connection: winrm
+    ansible_ssh_port: 5986
+    anisble_winrm_transport: kerberos
+    ansible_winrm_server_cert_validation: ignore
+    validate_certs: false
+    ansible_winrm_scheme: https
+    ansibe_winrm_read_timeout_sec: 120
+  tasks:
+   - name: Reboot the servers
+     win_updates:
+      state: downloaded
+      reboot: yes
+      win_shell: Restart-Computer -Force
+
+   - name: Search and download Windows updates without installing them
+     win_updates:
+       category_names: 
+        - SecurityUpdates
+        - CriticalUpdates
+        - UpdateRollups
+        - Definition Updates
+        - Windows Defender
+       whitelist:
+        - KB4056892
+        - KB4073117
+        - KB2267602
+        - KB4494452

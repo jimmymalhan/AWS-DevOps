@@ -1,0 +1,61 @@
+---
+- hosts: amazonlinux2
+  become: true
+  any_errors_fatal: true
+  serial: 1
+  max_fail_percentage: 0
+  vars:
+    ansible_user: ec2-user
+    state: absent
+  ignore_errors: yes
+  tasks:
+   - name: List ansible packages and register result to print with debug
+     yum:
+       list: ansible
+     register: result
+
+   - name: update cache
+     yum:
+       update_cache: yes
+     changed_when: false
+
+# List all the pending updates required by the system
+   - name: show pending updates
+     debug:
+       var: updates
+     when: updates.0 is defined
+
+# Define the package to be removed
+#  - name: remove upgraded packages
+#    yum: name=* state=absent update_cache=yes exclude=kernal,systemcd,yum
+#    register: upgrade_output
+
+   - name: Rebooting to run this smoothly..
+     shell: sleep 2 && shutdown -r now "Reboot triggered by ansible"
+     async: 90
+     poll: 5
+     ignore_errors: yes
+     when: updates.0 is defined
+
+# poll ssh port until we get a tcp connect
+   - name: wait for node to finish booting
+     become: true
+     local_action: wait_for host=amazonlinux2
+         port=22
+         state=started
+         delay=5
+         timeout=600
+     when: updates.0 is defined
+
+# give sshd time to start fully
+   - name: wait for ssh to start fully
+     pause:
+       seconds: 15
+     when: updates.0 is defined
+
+# wait a few minutes between hosts, unless we're on the last
+   - name: waiting between hosts
+     pause:
+       seconds: 600
+     when: upgrade_output is changed
+

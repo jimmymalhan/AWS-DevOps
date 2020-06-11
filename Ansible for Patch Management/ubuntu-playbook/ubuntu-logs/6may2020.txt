@@ -1,0 +1,1243 @@
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.2.250]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.2.250]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.2.250]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.2.250]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.2.250]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.250] => {
+    "updates": [
+        "libldap-2.4-2"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.2.250] => {
+    "updates": [
+        "libldap-2.4-2"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.250]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+changed: [10.0.2.250]
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+ok: [10.0.2.250]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+ok: [10.0.2.250]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+fatal: [10.0.2.250]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (apt) module: warn Supported parameters include: allow_unauthenticated, autoclean, autoremove, cache_valid_time, deb, default_release, dpkg_options, force, force_apt_get, install_recommends, only_upgrade, package, policy_rc_d, purge, state, update_cache, upgrade"}
+...ignoring
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+ok: [10.0.2.250]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+changed: [10.0.2.250]
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.2.250 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.250]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+Pausing for 600 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.250]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+fatal: [10.0.2.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.90 port 22: No route to host", "skip_reason": "Host 10.0.2.90 is unreachable", "unreachable": true}
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+fatal: [10.0.2.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.90 port 22: No route to host", "skip_reason": "Host 10.0.2.90 is unreachable", "unreachable": true}
+
+TASK [Update cache] ********************************************************************************************************************************************************
+fatal: [10.0.2.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.90 port 22: No route to host", "skip_reason": "Host 10.0.2.90 is unreachable", "unreachable": true}
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+fatal: [10.0.2.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.90 port 22: No route to host", "skip_reason": "Host 10.0.2.90 is unreachable", "unreachable": true}
+
+TASK [set_fact] ************************************************************************************************************************************************************
+fatal: [10.0.2.90]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'stdout_lines'\n\nThe error appears to be in '/etc/ansible/ubuntu-playbook/production-update-ubuntu.yml': line 39, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n      register: aptlist\n    - set_fact:\n      ^ here\n"}
+...ignoring
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.90] => {
+    "updates": "VARIABLE IS NOT DEFINED!"
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [pause] ***************************************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+fatal: [10.0.2.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.90 port 22: No route to host", "skip_reason": "Host 10.0.2.90 is unreachable", "unreachable": true}
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+fatal: [10.0.2.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.90 port 22: No route to host", "skip_reason": "Host 10.0.2.90 is unreachable", "unreachable": true}
+
+TASK [reboot node] *********************************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+skipping: [10.0.2.90]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.2.80]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.2.80]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.2.80]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.2.80]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.2.80]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.80] => {
+    "updates": [
+        "libldap-2.4-2", 
+        "linux-firmware"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.2.80] => {
+    "updates": [
+        "libldap-2.4-2", 
+        "linux-firmware"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.80]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+fatal: [10.0.2.80]: FAILED! => {"changed": false, "msg": "'/usr/bin/apt-get dist-upgrade ' failed: E: Sub-process /usr/bin/dpkg returned an error code (1)\n", "rc": 100, "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nCalculating upgrade...\nThe following packages were automatically installed and are no longer required:\n  linux-headers-4.4.0-150 linux-headers-4.4.0-150-generic\n  linux-headers-4.4.0-154 linux-headers-4.4.0-154-generic\n  linux-headers-4.4.0-171 linux-headers-4.4.0-171-generic\n  linux-image-4.4.0-150-generic linux-image-4.4.0-154-generic\n  linux-image-4.4.0-171-generic linux-modules-4.4.0-150-generic\n  linux-modules-4.4.0-154-generic linux-modules-4.4.0-171-generic\n  linux-modules-extra-4.4.0-150-generic linux-modules-extra-4.4.0-154-generic\n  linux-modules-extra-4.4.0-171-generic\nUse 'sudo apt autoremove' to remove them.\nThe following packages will be upgraded:\n  libldap-2.4-2 linux-firmware\n2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n1 not fully installed or removed.\nNeed to get 50.8 MB of archives.\nAfter this operation, 131 kB of additional disk space will be used.\nGet:1 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.8 [159 kB]\nGet:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 linux-firmware all 1.157.23 [50.6 MB]\nFetched 50.8 MB in 3s (14.8 MB/s)\n(Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 198950 files and directories currently installed.)\r\nPreparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.8_amd64.deb ...\r\nUnpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.8) over (2.4.42+dfsg-2ubuntu3.7) ...\r\nPreparing to unpack .../linux-firmware_1.157.23_all.deb ...\r\nUnpacking linux-firmware (1.157.23) over (1.157.22) ...\r\nProcessing triggers for man-db (2.7.5-1) ...\r\nSetting up linux-image-4.4.0-178-generic (4.4.0-178.208) ...\r\nSetting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.8) ...\r\nSetting up linux-firmware (1.157.23) ...\r\nupdate-initramfs: Generating /boot/initrd.img-4.4.0-173-generic\r\n\r\ngzip: stdout: No space left on device\r\nE: mkinitramfs failure find 141 cpio 141 gzip 1\r\nupdate-initramfs: failed for /boot/initrd.img-4.4.0-173-generic with 1.\r\ndpkg: error processing package linux-firmware (--configure):\r\n subprocess installed post-installation script returned error exit status 1\r\nProcessing triggers for linux-image-4.4.0-178-generic (4.4.0-178.208) ...\r\n/etc/kernel/postinst.d/initramfs-tools:\r\nupdate-initramfs: Generating /boot/initrd.img-4.4.0-178-generic\r\n\r\ngzip: stdout: No space left on device\r\nE: mkinitramfs failure find 141 cpio 141 gzip 1\r\nupdate-initramfs: failed for /boot/initrd.img-4.4.0-178-generic with 1.\r\nrun-parts: /etc/kernel/postinst.d/initramfs-tools exited with return code 1\r\ndpkg: error processing package linux-image-4.4.0-178-generic (--configure):\r\n subprocess installed post-installation script returned error exit status 1\r\nProcessing triggers for libc-bin (2.23-0ubuntu11) ...\r\nErrors were encountered while processing:\r\n linux-firmware\r\n linux-image-4.4.0-178-generic\r\n", "stdout_lines": ["Reading package lists...", "Building dependency tree...", "Reading state information...", "Calculating upgrade...", "The following packages were automatically installed and are no longer required:", "  linux-headers-4.4.0-150 linux-headers-4.4.0-150-generic", "  linux-headers-4.4.0-154 linux-headers-4.4.0-154-generic", "  linux-headers-4.4.0-171 linux-headers-4.4.0-171-generic", "  linux-image-4.4.0-150-generic linux-image-4.4.0-154-generic", "  linux-image-4.4.0-171-generic linux-modules-4.4.0-150-generic", "  linux-modules-4.4.0-154-generic linux-modules-4.4.0-171-generic", "  linux-modules-extra-4.4.0-150-generic linux-modules-extra-4.4.0-154-generic", "  linux-modules-extra-4.4.0-171-generic", "Use 'sudo apt autoremove' to remove them.", "The following packages will be upgraded:", "  libldap-2.4-2 linux-firmware", "2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.", "1 not fully installed or removed.", "Need to get 50.8 MB of archives.", "After this operation, 131 kB of additional disk space will be used.", "Get:1 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.8 [159 kB]", "Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 linux-firmware all 1.157.23 [50.6 MB]", "Fetched 50.8 MB in 3s (14.8 MB/s)", "(Reading database ... ", "(Reading database ... 5%", "(Reading database ... 10%", "(Reading database ... 15%", "(Reading database ... 20%", "(Reading database ... 25%", "(Reading database ... 30%", "(Reading database ... 35%", "(Reading database ... 40%", "(Reading database ... 45%", "(Reading database ... 50%", "(Reading database ... 55%", "(Reading database ... 60%", "(Reading database ... 65%", "(Reading database ... 70%", "(Reading database ... 75%", "(Reading database ... 80%", "(Reading database ... 85%", "(Reading database ... 90%", "(Reading database ... 95%", "(Reading database ... 100%", "(Reading database ... 198950 files and directories currently installed.)", "Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.8_amd64.deb ...", "Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.8) over (2.4.42+dfsg-2ubuntu3.7) ...", "Preparing to unpack .../linux-firmware_1.157.23_all.deb ...", "Unpacking linux-firmware (1.157.23) over (1.157.22) ...", "Processing triggers for man-db (2.7.5-1) ...", "Setting up linux-image-4.4.0-178-generic (4.4.0-178.208) ...", "Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.8) ...", "Setting up linux-firmware (1.157.23) ...", "update-initramfs: Generating /boot/initrd.img-4.4.0-173-generic", "", "gzip: stdout: No space left on device", "E: mkinitramfs failure find 141 cpio 141 gzip 1", "update-initramfs: failed for /boot/initrd.img-4.4.0-173-generic with 1.", "dpkg: error processing package linux-firmware (--configure):", " subprocess installed post-installation script returned error exit status 1", "Processing triggers for linux-image-4.4.0-178-generic (4.4.0-178.208) ...", "/etc/kernel/postinst.d/initramfs-tools:", "update-initramfs: Generating /boot/initrd.img-4.4.0-178-generic", "", "gzip: stdout: No space left on device", "E: mkinitramfs failure find 141 cpio 141 gzip 1", "update-initramfs: failed for /boot/initrd.img-4.4.0-178-generic with 1.", "run-parts: /etc/kernel/postinst.d/initramfs-tools exited with return code 1", "dpkg: error processing package linux-image-4.4.0-178-generic (--configure):", " subprocess installed post-installation script returned error exit status 1", "Processing triggers for libc-bin (2.23-0ubuntu11) ...", "Errors were encountered while processing:", " linux-firmware", " linux-image-4.4.0-178-generic"]}
+...ignoring
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+skipping: [10.0.2.80]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+skipping: [10.0.2.80]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+skipping: [10.0.2.80]
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+changed: [10.0.2.80]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.2.80]: FAILED! => {"changed": false, "msg": "async task did not complete within the requested time - 90s"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.2.80 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.80]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+skipping: [10.0.2.80]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.2.244]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.2.244]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.2.244]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.2.244]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.2.244]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.244] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.2.244] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.244]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+changed: [10.0.2.244]
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+ok: [10.0.2.244]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+ok: [10.0.2.244]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+fatal: [10.0.2.244]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (apt) module: warn Supported parameters include: allow_unauthenticated, autoclean, autoremove, cache_valid_time, deb, default_release, dpkg_options, force, force_apt_get, install_recommends, only_upgrade, package, policy_rc_d, purge, state, update_cache, upgrade"}
+...ignoring
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+ok: [10.0.2.244]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.2.244]: FAILED! => {"changed": false, "msg": "async task did not complete within the requested time - 90s"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.2.244 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.244]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+Pausing for 600 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.244]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.2.11]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.2.11]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.2.11]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.2.11]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.2.11]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.11] => {
+    "updates": [
+        "ldap-utils", 
+        "libjpeg-progs", 
+        "libjpeg-turbo-progs", 
+        "libldap-2.4-2", 
+        "linux-firmware", 
+        "slapd"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.2.11] => {
+    "updates": [
+        "ldap-utils", 
+        "libjpeg-progs", 
+        "libjpeg-turbo-progs", 
+        "libldap-2.4-2", 
+        "linux-firmware", 
+        "slapd"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.11]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+changed: [10.0.2.11]
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+ok: [10.0.2.11]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+ok: [10.0.2.11]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+fatal: [10.0.2.11]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (apt) module: warn Supported parameters include: allow_unauthenticated, autoclean, autoremove, cache_valid_time, deb, default_release, dpkg_options, force, force_apt_get, install_recommends, only_upgrade, package, policy_rc_d, purge, state, update_cache, upgrade"}
+...ignoring
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+ok: [10.0.2.11]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.2.11]: FAILED! => {"changed": false, "msg": "async task did not complete within the requested time - 90s"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.2.11 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.11]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+Pausing for 600 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.11]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+fatal: [10.0.3.151]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.3.151 port 22: Connection timed out", "skip_reason": "Host 10.0.3.151 is unreachable", "unreachable": true}
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+fatal: [10.0.3.151]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.3.151 port 22: Connection timed out", "skip_reason": "Host 10.0.3.151 is unreachable", "unreachable": true}
+
+TASK [Update cache] ********************************************************************************************************************************************************
+fatal: [10.0.3.151]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.3.151 port 22: Connection timed out", "skip_reason": "Host 10.0.3.151 is unreachable", "unreachable": true}
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+fatal: [10.0.3.151]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.3.151 port 22: Connection timed out", "skip_reason": "Host 10.0.3.151 is unreachable", "unreachable": true}
+
+TASK [set_fact] ************************************************************************************************************************************************************
+fatal: [10.0.3.151]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'stdout_lines'\n\nThe error appears to be in '/etc/ansible/ubuntu-playbook/production-update-ubuntu.yml': line 39, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n      register: aptlist\n    - set_fact:\n      ^ here\n"}
+...ignoring
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.3.151] => {
+    "updates": "VARIABLE IS NOT DEFINED!"
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [pause] ***************************************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+fatal: [10.0.3.151]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.3.151 port 22: Connection timed out", "skip_reason": "Host 10.0.3.151 is unreachable", "unreachable": true}
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+fatal: [10.0.3.151]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.3.151 port 22: Connection timed out", "skip_reason": "Host 10.0.3.151 is unreachable", "unreachable": true}
+
+TASK [reboot node] *********************************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+skipping: [10.0.3.151]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.3.123]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.3.123]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.3.123]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.3.123]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.3.123]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.3.123] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2", 
+        "libldap-common"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.3.123] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2", 
+        "libldap-common"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.3.123]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+changed: [10.0.3.123]
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+ok: [10.0.3.123]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+ok: [10.0.3.123]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+fatal: [10.0.3.123]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (apt) module: warn Supported parameters include: allow_unauthenticated, autoclean, autoremove, cache_valid_time, deb, default_release, dpkg_options, force, force_apt_get, install_recommends, only_upgrade, package, policy_rc_d, purge, state, update_cache, upgrade"}
+...ignoring
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+ok: [10.0.3.123]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.3.123]: FAILED! => {"changed": false, "msg": "async task did not complete within the requested time - 90s"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.3.123 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.3.123]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+Pausing for 600 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.3.123]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.2.64]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.2.64]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.2.64]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.2.64]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.2.64]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.64] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2", 
+        "libldap-common"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.2.64] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2", 
+        "libldap-common"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.64]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+changed: [10.0.2.64]
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+ok: [10.0.2.64]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+ok: [10.0.2.64]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+fatal: [10.0.2.64]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (apt) module: warn Supported parameters include: allow_unauthenticated, autoclean, autoremove, cache_valid_time, deb, default_release, dpkg_options, force, force_apt_get, install_recommends, only_upgrade, package, policy_rc_d, purge, state, update_cache, upgrade"}
+...ignoring
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+ok: [10.0.2.64]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.2.64]: FAILED! => {"msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.64 port 22: Connection refused"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.2.64 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.64]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+Pausing for 600 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.64]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+fatal: [10.0.2.186]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Could not import python modules: apt, apt_pkg. Please install python3-apt package."}
+...ignoring
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.2.186]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+fatal: [10.0.2.186]: FAILED! => {"changed": false, "msg": "Could not import python modules: apt, apt_pkg. Please install python3-apt package."}
+...ignoring
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.2.186]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.2.186]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.186] => {
+    "updates": [
+        "base-files", 
+        "binutils", 
+        "binutils-common", 
+        "binutils-x86-64-linux-gnu", 
+        "bsdutils", 
+        "cloud-init", 
+        "containerd", 
+        "cpp-7", 
+        "distro-info-data", 
+        "dmidecode", 
+        "docker.io", 
+        "e2fsprogs", 
+        "fdisk", 
+        "g++-7", 
+        "gcc-7", 
+        "gcc-7-base", 
+        "gcc-8-base", 
+        "git", 
+        "git-man", 
+        "grub-common", 
+        "grub-pc", 
+        "grub-pc-bin", 
+        "grub2-common", 
+        "kmod", 
+        "ldap-utils", 
+        "libasan4", 
+        "libatomic1", 
+        "libbinutils", 
+        "libblkid1", 
+        "libcc1-0", 
+        "libcilkrts5", 
+        "libcom-err2", 
+        "libcups2", 
+        "libdrm-common", 
+        "libdrm2", 
+        "libext2fs2", 
+        "libfdisk1", 
+        "libgcc-7-dev", 
+        "libgcc1", 
+        "libglib2.0-0", 
+        "libglib2.0-bin", 
+        "libglib2.0-data", 
+        "libgnutls30", 
+        "libgomp1", 
+        "libicu60", 
+        "libipa-hbac0", 
+        "libitm1", 
+        "libkmod2", 
+        "libldap-2.4-2", 
+        "libldap-common", 
+        "libldap2-dev", 
+        "liblsan0", 
+        "libmount1", 
+        "libmpx2", 
+        "libnss-sss", 
+        "libnss-systemd", 
+        "libpam-sss", 
+        "libpam-systemd", 
+        "libpython2.7", 
+        "libpython2.7-dev", 
+        "libpython2.7-minimal", 
+        "libpython2.7-stdlib", 
+        "libpython3.6", 
+        "libpython3.6-dev", 
+        "libpython3.6-minimal", 
+        "libpython3.6-stdlib", 
+        "libquadmath0", 
+        "libsasl2-2", 
+        "libsasl2-dev", 
+        "libsasl2-modules", 
+        "libsasl2-modules-db", 
+        "libsasl2-modules-gssapi-mit", 
+        "libsmartcols1", 
+        "libsmbclient", 
+        "libsqlite3-0", 
+        "libss2", 
+        "libsss-certmap0", 
+        "libsss-idmap0", 
+        "libsss-nss-idmap0", 
+        "libsss-simpleifp0", 
+        "libsss-sudo", 
+        "libstdc++-7-dev", 
+        "libstdc++6", 
+        "libsystemd0", 
+        "libtsan0", 
+        "libubsan0", 
+        "libudev1", 
+        "libuuid1", 
+        "libwbclient0", 
+        "libxml2", 
+        "linux-aws", 
+        "linux-base", 
+        "linux-headers-aws", 
+        "linux-image-aws", 
+        "linux-libc-dev", 
+        "lxcfs", 
+        "mdadm", 
+        "mount", 
+        "open-vm-tools", 
+        "python-apt-common", 
+        "python-samba", 
+        "python2.7", 
+        "python2.7-dev", 
+        "python2.7-minimal", 
+        "python3-problem-report", 
+        "python3-sss", 
+        "python3-twisted", 
+        "python3-twisted-bin", 
+        "python3.6", 
+        "python3.6-dev", 
+        "python3.6-minimal", 
+        "rsync", 
+        "runc", 
+        "samba-common", 
+        "samba-common-bin", 
+        "samba-libs", 
+        "sosreport", 
+        "sssd", 
+        "sssd-ad", 
+        "sssd-ad-common", 
+        "sssd-common", 
+        "sssd-dbus", 
+        "sssd-ipa", 
+        "sssd-krb5", 
+        "sssd-krb5-common", 
+        "sssd-ldap", 
+        "sssd-proxy", 
+        "sssd-tools", 
+        "sudo", 
+        "systemd", 
+        "systemd-sysv", 
+        "tcpdump", 
+        "ubuntu-minimal", 
+        "udev", 
+        "util-linux", 
+        "uuid-runtime", 
+        "vim", 
+        "vim-common", 
+        "vim-runtime", 
+        "vim-tiny", 
+        "xxd"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.2.186] => {
+    "updates": [
+        "base-files", 
+        "binutils", 
+        "binutils-common", 
+        "binutils-x86-64-linux-gnu", 
+        "bsdutils", 
+        "cloud-init", 
+        "containerd", 
+        "cpp-7", 
+        "distro-info-data", 
+        "dmidecode", 
+        "docker.io", 
+        "e2fsprogs", 
+        "fdisk", 
+        "g++-7", 
+        "gcc-7", 
+        "gcc-7-base", 
+        "gcc-8-base", 
+        "git", 
+        "git-man", 
+        "grub-common", 
+        "grub-pc", 
+        "grub-pc-bin", 
+        "grub2-common", 
+        "kmod", 
+        "ldap-utils", 
+        "libasan4", 
+        "libatomic1", 
+        "libbinutils", 
+        "libblkid1", 
+        "libcc1-0", 
+        "libcilkrts5", 
+        "libcom-err2", 
+        "libcups2", 
+        "libdrm-common", 
+        "libdrm2", 
+        "libext2fs2", 
+        "libfdisk1", 
+        "libgcc-7-dev", 
+        "libgcc1", 
+        "libglib2.0-0", 
+        "libglib2.0-bin", 
+        "libglib2.0-data", 
+        "libgnutls30", 
+        "libgomp1", 
+        "libicu60", 
+        "libipa-hbac0", 
+        "libitm1", 
+        "libkmod2", 
+        "libldap-2.4-2", 
+        "libldap-common", 
+        "libldap2-dev", 
+        "liblsan0", 
+        "libmount1", 
+        "libmpx2", 
+        "libnss-sss", 
+        "libnss-systemd", 
+        "libpam-sss", 
+        "libpam-systemd", 
+        "libpython2.7", 
+        "libpython2.7-dev", 
+        "libpython2.7-minimal", 
+        "libpython2.7-stdlib", 
+        "libpython3.6", 
+        "libpython3.6-dev", 
+        "libpython3.6-minimal", 
+        "libpython3.6-stdlib", 
+        "libquadmath0", 
+        "libsasl2-2", 
+        "libsasl2-dev", 
+        "libsasl2-modules", 
+        "libsasl2-modules-db", 
+        "libsasl2-modules-gssapi-mit", 
+        "libsmartcols1", 
+        "libsmbclient", 
+        "libsqlite3-0", 
+        "libss2", 
+        "libsss-certmap0", 
+        "libsss-idmap0", 
+        "libsss-nss-idmap0", 
+        "libsss-simpleifp0", 
+        "libsss-sudo", 
+        "libstdc++-7-dev", 
+        "libstdc++6", 
+        "libsystemd0", 
+        "libtsan0", 
+        "libubsan0", 
+        "libudev1", 
+        "libuuid1", 
+        "libwbclient0", 
+        "libxml2", 
+        "linux-aws", 
+        "linux-base", 
+        "linux-headers-aws", 
+        "linux-image-aws", 
+        "linux-libc-dev", 
+        "lxcfs", 
+        "mdadm", 
+        "mount", 
+        "open-vm-tools", 
+        "python-apt-common", 
+        "python-samba", 
+        "python2.7", 
+        "python2.7-dev", 
+        "python2.7-minimal", 
+        "python3-problem-report", 
+        "python3-sss", 
+        "python3-twisted", 
+        "python3-twisted-bin", 
+        "python3.6", 
+        "python3.6-dev", 
+        "python3.6-minimal", 
+        "rsync", 
+        "runc", 
+        "samba-common", 
+        "samba-common-bin", 
+        "samba-libs", 
+        "sosreport", 
+        "sssd", 
+        "sssd-ad", 
+        "sssd-ad-common", 
+        "sssd-common", 
+        "sssd-dbus", 
+        "sssd-ipa", 
+        "sssd-krb5", 
+        "sssd-krb5-common", 
+        "sssd-ldap", 
+        "sssd-proxy", 
+        "sssd-tools", 
+        "sudo", 
+        "systemd", 
+        "systemd-sysv", 
+        "tcpdump", 
+        "ubuntu-minimal", 
+        "udev", 
+        "util-linux", 
+        "uuid-runtime", 
+        "vim", 
+        "vim-common", 
+        "vim-runtime", 
+        "vim-tiny", 
+        "xxd"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.186]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+fatal: [10.0.2.186]: FAILED! => {"changed": false, "msg": "Could not import python modules: apt, apt_pkg. Please install python3-apt package."}
+...ignoring
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+skipping: [10.0.2.186]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+skipping: [10.0.2.186]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+skipping: [10.0.2.186]
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+fatal: [10.0.2.186]: FAILED! => {"changed": false, "msg": "Could not import python modules: apt, apt_pkg. Please install python3-apt package."}
+...ignoring
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.2.186]: FAILED! => {"changed": false, "msg": "async task did not complete within the requested time - 90s"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.2.186 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.2.186]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+skipping: [10.0.2.186]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+fatal: [10.0.2.139]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.139 port 22: No route to host", "skip_reason": "Host 10.0.2.139 is unreachable", "unreachable": true}
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+fatal: [10.0.2.139]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.139 port 22: No route to host", "skip_reason": "Host 10.0.2.139 is unreachable", "unreachable": true}
+
+TASK [Update cache] ********************************************************************************************************************************************************
+fatal: [10.0.2.139]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.139 port 22: No route to host", "skip_reason": "Host 10.0.2.139 is unreachable", "unreachable": true}
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+fatal: [10.0.2.139]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.139 port 22: No route to host", "skip_reason": "Host 10.0.2.139 is unreachable", "unreachable": true}
+
+TASK [set_fact] ************************************************************************************************************************************************************
+fatal: [10.0.2.139]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'stdout_lines'\n\nThe error appears to be in '/etc/ansible/ubuntu-playbook/production-update-ubuntu.yml': line 39, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n      register: aptlist\n    - set_fact:\n      ^ here\n"}
+...ignoring
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.2.139] => {
+    "updates": "VARIABLE IS NOT DEFINED!"
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [pause] ***************************************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+fatal: [10.0.2.139]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.139 port 22: No route to host", "skip_reason": "Host 10.0.2.139 is unreachable", "unreachable": true}
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+fatal: [10.0.2.139]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 10.0.2.139 port 22: No route to host", "skip_reason": "Host 10.0.2.139 is unreachable", "unreachable": true}
+
+TASK [reboot node] *********************************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+skipping: [10.0.2.139]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.3.102]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.3.102]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.3.102]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.3.102]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.3.102]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.3.102] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2", 
+        "libldap-common"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.3.102] => {
+    "updates": [
+        "ldap-utils", 
+        "libldap-2.4-2", 
+        "libldap-common"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.3.102]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+changed: [10.0.3.102]
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+ok: [10.0.3.102]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+ok: [10.0.3.102]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+fatal: [10.0.3.102]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (apt) module: warn Supported parameters include: allow_unauthenticated, autoclean, autoremove, cache_valid_time, deb, default_release, dpkg_options, force, force_apt_get, install_recommends, only_upgrade, package, policy_rc_d, purge, state, update_cache, upgrade"}
+...ignoring
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+ok: [10.0.3.102]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.3.102]: FAILED! => {"changed": false, "msg": "async task did not complete within the requested time - 90s"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.3.102 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.3.102]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+Pausing for 600 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.3.102]
+
+PLAY [ubuntu] **************************************************************************************************************************************************************
+
+TASK [Updating the packages] ***********************************************************************************************************************************************
+ok: [10.0.1.159]
+
+TASK [get list of pending upgrades] ****************************************************************************************************************************************
+ok: [10.0.1.159]
+
+TASK [Update cache] ********************************************************************************************************************************************************
+ok: [10.0.1.159]
+
+TASK [Fetch package list of updates] ***************************************************************************************************************************************
+changed: [10.0.1.159]
+
+TASK [set_fact] ************************************************************************************************************************************************************
+ok: [10.0.1.159]
+
+TASK [debug] ***************************************************************************************************************************************************************
+ok: [10.0.1.159] => {
+    "updates": [
+        "bsdutils", 
+        "distro-info-data", 
+        "ec2-hibinit-agent", 
+        "fdisk", 
+        "grub-common", 
+        "grub-pc", 
+        "grub-pc-bin", 
+        "grub2-common", 
+        "kmod", 
+        "ldap-utils", 
+        "libapache2-mod-php5.6", 
+        "libblkid1", 
+        "libfdisk1", 
+        "libgd3", 
+        "libidn2-0", 
+        "libipa-hbac0", 
+        "libkmod2", 
+        "libldap-2.4-2", 
+        "libldap-common", 
+        "libmount1", 
+        "libsmartcols1", 
+        "libssl1.1", 
+        "libsss-idmap0", 
+        "libsss-simpleifp0", 
+        "libuuid1", 
+        "libxml2", 
+        "libzip4", 
+        "lxcfs", 
+        "mount", 
+        "open-vm-tools", 
+        "openssl", 
+        "php-common", 
+        "php5.6", 
+        "php5.6-cli", 
+        "php5.6-common", 
+        "php5.6-curl", 
+        "php5.6-gd", 
+        "php5.6-intl", 
+        "php5.6-json", 
+        "php5.6-mbstring", 
+        "php5.6-mysql", 
+        "php5.6-opcache", 
+        "php5.6-readline", 
+        "php5.6-soap", 
+        "php5.6-xml", 
+        "php5.6-xmlrpc", 
+        "php5.6-zip", 
+        "python3-sss", 
+        "python3-update-manager", 
+        "sosreport", 
+        "sssd", 
+        "sssd-ad", 
+        "sssd-ad-common", 
+        "sssd-common", 
+        "sssd-dbus", 
+        "sssd-ipa", 
+        "sssd-krb5", 
+        "sssd-krb5-common", 
+        "sssd-ldap", 
+        "sssd-proxy", 
+        "sssd-tools", 
+        "update-manager-core", 
+        "util-linux", 
+        "uuid-runtime"
+    ]
+}
+
+TASK [show pending updates] ************************************************************************************************************************************************
+ok: [10.0.1.159] => {
+    "updates": [
+        "bsdutils", 
+        "distro-info-data", 
+        "ec2-hibinit-agent", 
+        "fdisk", 
+        "grub-common", 
+        "grub-pc", 
+        "grub-pc-bin", 
+        "grub2-common", 
+        "kmod", 
+        "ldap-utils", 
+        "libapache2-mod-php5.6", 
+        "libblkid1", 
+        "libfdisk1", 
+        "libgd3", 
+        "libidn2-0", 
+        "libipa-hbac0", 
+        "libkmod2", 
+        "libldap-2.4-2", 
+        "libldap-common", 
+        "libmount1", 
+        "libsmartcols1", 
+        "libssl1.1", 
+        "libsss-idmap0", 
+        "libsss-simpleifp0", 
+        "libuuid1", 
+        "libxml2", 
+        "libzip4", 
+        "lxcfs", 
+        "mount", 
+        "open-vm-tools", 
+        "openssl", 
+        "php-common", 
+        "php5.6", 
+        "php5.6-cli", 
+        "php5.6-common", 
+        "php5.6-curl", 
+        "php5.6-gd", 
+        "php5.6-intl", 
+        "php5.6-json", 
+        "php5.6-mbstring", 
+        "php5.6-mysql", 
+        "php5.6-opcache", 
+        "php5.6-readline", 
+        "php5.6-soap", 
+        "php5.6-xml", 
+        "php5.6-xmlrpc", 
+        "php5.6-zip", 
+        "python3-sss", 
+        "python3-update-manager", 
+        "sosreport", 
+        "sssd", 
+        "sssd-ad", 
+        "sssd-ad-common", 
+        "sssd-common", 
+        "sssd-dbus", 
+        "sssd-ipa", 
+        "sssd-krb5", 
+        "sssd-krb5-common", 
+        "sssd-ldap", 
+        "sssd-proxy", 
+        "sssd-tools", 
+        "update-manager-core", 
+        "util-linux", 
+        "uuid-runtime"
+    ]
+}
+
+TASK [pause] ***************************************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.1.159]
+
+TASK [apt-get dist-upgrade] ************************************************************************************************************************************************
+changed: [10.0.1.159]
+
+TASK [apt-get autoremove] **************************************************************************************************************************************************
+ok: [10.0.1.159]
+
+TASK [fix dependency problems] *********************************************************************************************************************************************
+ok: [10.0.1.159]
+
+TASK [cleaning unnecessary dependencies] ***********************************************************************************************************************************
+fatal: [10.0.1.159]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (apt) module: warn Supported parameters include: allow_unauthenticated, autoclean, autoremove, cache_valid_time, deb, default_release, dpkg_options, force, force_apt_get, install_recommends, only_upgrade, package, policy_rc_d, purge, state, update_cache, upgrade"}
+...ignoring
+
+TASK [Remove dependencies that are no longer required] *********************************************************************************************************************
+ok: [10.0.1.159]
+
+TASK [reboot node] *********************************************************************************************************************************************************
+fatal: [10.0.1.159]: FAILED! => {"changed": false, "msg": "async task did not complete within the requested time - 90s"}
+...ignoring
+
+TASK [wait for node to finish booting] *************************************************************************************************************************************
+fatal: [10.0.1.159 -> localhost]: FAILED! => {"changed": false, "elapsed": 600, "msg": "Timeout when waiting for ubuntu:22"}
+...ignoring
+
+TASK [wait for ssh to start fully] *****************************************************************************************************************************************
+Pausing for 15 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.1.159]
+
+TASK [waiting between hosts] ***********************************************************************************************************************************************
+Pausing for 600 seconds
+(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+ok: [10.0.1.159]
+
+PLAY RECAP *****************************************************************************************************************************************************************
+10.0.1.159                 : ok=17   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   
+10.0.2.11                  : ok=17   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   
+10.0.2.139                 : ok=2    changed=0    unreachable=6    failed=0    skipped=15   rescued=0    ignored=1   
+10.0.2.186                 : ok=13   changed=1    unreachable=0    failed=0    skipped=4    rescued=0    ignored=6   
+10.0.2.244                 : ok=17   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   
+10.0.2.250                 : ok=17   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   
+10.0.2.64                  : ok=17   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   
+10.0.2.80                  : ok=13   changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=3   
+10.0.2.90                  : ok=2    changed=0    unreachable=6    failed=0    skipped=15   rescued=0    ignored=1   
+10.0.3.102                 : ok=17   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   
+10.0.3.123                 : ok=17   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=3   
+10.0.3.151                 : ok=2    changed=0    unreachable=6    failed=0    skipped=15   rescued=0    ignored=1   
+

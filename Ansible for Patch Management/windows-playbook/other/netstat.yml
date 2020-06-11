@@ -1,0 +1,13 @@
+---
+- hosts: windows
+  vars:
+    ansible_connection: winrm
+    anisble_winrm_transport: basic
+    ansible_winrm_server_cert_validation: ignore
+    ansible_python_interpreter: C:\Python37\python.exe
+  name: Check netstat on my machines now
+  tasks:
+    - name: run netstat and return Ethernet stats 
+      win_command: netstat -e
+      register: netstat
+    - debug: var=netstat

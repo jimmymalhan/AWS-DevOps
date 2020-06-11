@@ -1,0 +1,12 @@
+---
+- hosts: database
+  become: true
+  vars:
+    ansible_user: ubuntu
+  tasks:
+   - name: install mysql-server
+     apt: name=mysql-server state=present update_cache=yes
+
+   - name: ensure mysql-server
+     service: name=mysql state=started enabled=yes
+

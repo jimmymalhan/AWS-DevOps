@@ -1,0 +1,251 @@
+
+PLAY [windows] *******************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************
+fatal: [WIN-Q0QJ2LCCUR4.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [testcomplete.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='testcomplete.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46eedc90>: Failed to establish a new connection: [Errno -2] Name or service not known',))", "unreachable": true}
+fatal: [MQN-S2FA14DAA7H.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [MQNIX.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [MQN-Conference.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [WIN-ES3L5DAS5CJ.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='win-es3l5das5cj.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46eed990>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+fatal: [MQN-A08717088.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [MQN-64ONKQGL30Q.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [MQN-55LFH9DI0DN.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [MQHAUMEA.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='mqhaumea.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46ee3910>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+fatal: [LD-MJ04WHL3.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+ok: [MQMOOLA.corp.medqia.com]
+ok: [DPHPGK2.corp.medqia.com]
+ok: [MQN-8VDT9DVUCJ9.corp.medqia.com]
+fatal: [DHVRRR52.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [DF2NJQH2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='df2njqh2.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46eb4ed0>: Failed to establish a new connection: [Errno -2] Name or service not known',))", "unreachable": true}
+fatal: [DESKTOP-R19N1Q4.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='desktop-r19n1q4.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46eb0e50>: Failed to establish a new connection: [Errno -2] Name or service not known',))", "unreachable": true}
+fatal: [DESKTOP-LAFJTAH.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+ok: [jimmy.corp.medqia.com]
+ok: [MQLYRA.corp.medqia.com]
+fatal: [D9L58382.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='d9l58382.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46e6a150>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+fatal: [D8YWBJH2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [D8PF4JL2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [D7TWLXK2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='d7twlxk2.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46e6b350>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+ok: [DHYDGGK2.corp.medqia.com]
+ok: [DJDYBFB2.corp.medqia.com]
+ok: [DESKTOP-GV5K3SM.corp.medqia.com]
+fatal: [BOFABAHAM.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [A68574554.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='a68574554.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46e34210>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+ok: [DDW0QZB2.corp.medqia.com]
+fatal: [D5XJZSD2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [MQN-NHFUTR7.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='mqn-nhfutr7.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46e4bcd0>: Failed to establish a new connection: [Errno -2] Name or service not known',))", "unreachable": true}
+ok: [D7TWJXK2.corp.medqia.com]
+ok: [BOFAMURTH.corp.medqia.com]
+ok: [BOFAZI.corp.medqia.com]
+ok: [9XJ8KB2.corp.medqia.com]
+fatal: [LTP-katjohnson.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='ltp-katjohnson.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46e44d50>, 'Connection to ltp-katjohnson.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [LTP-hclem.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='ltp-hclem.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46de4550>, 'Connection to ltp-hclem.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [LTP-COORD1.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='ltp-coord1.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46df4190>, 'Connection to ltp-coord1.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [LTP-colove.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='ltp-colove.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46e08890>, 'Connection to ltp-colove.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [DESKTOP-RD27G1U.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+ok: [HYDJGK2.corp.medqia.com]
+fatal: [DESKTOP-9FJQFAK.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='desktop-9fjqfak.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46dbd150>: Failed to establish a new connection: [Errno -2] Name or service not known',))", "unreachable": true}
+fatal: [LTP-bferracane.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='ltp-bferracane.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46d982d0>, 'Connection to ltp-bferracane.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+ok: [DHR1RCH2.corp.medqia.com]
+fatal: [D8YW8JH2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [avcoimlp.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [DESKTOP-VDB7AUM.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='desktop-vdb7aum.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46e31510>, 'Connection to desktop-vdb7aum.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [DESKTOP-LAD9G6Q.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='desktop-lad9g6q.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46d957d0>, 'Connection to desktop-lad9g6q.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [DESKTOP-85AEUBB.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='desktop-85aeubb.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46dbdad0>, 'Connection to desktop-85aeubb.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [DESKTOP-88C426G.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='desktop-88c426g.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46dbd7d0>, 'Connection to desktop-88c426g.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [A64765070.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Server not found in Kerberos database', -1765328377))", "unreachable": true}
+fatal: [WIN-JMVFIU6BPRD.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='win-jmvfiu6bprd.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46dc12d0>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+fatal: [avcoimlp4.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='avcoimlp4.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46d5cd10>, 'Connection to avcoimlp4.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+ok: [EC2AMAZ-JESRJ0Q.corp.medqia.com]
+ok: [EC2AMAZ-2K34HUL.corp.medqia.com]
+ok: [EC2AMAZ-HKLR2OH.corp.medqia.com]
+ok: [EC2AMAZ-5TQR7L8.corp.medqia.com]
+ok: [EC2AMAZ-9M186EG.corp.medqia.com]
+ok: [EC2AMAZ-GT3PG4T.corp.medqia.com]
+fatal: [codetwo.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='codetwo.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46d3e150>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+fatal: [avcoimla.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='avcoimla.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46d56ad0>, 'Connection to avcoimla.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [avcocnlp3.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='avcocnlp3.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46dc1750>, 'Connection to avcocnlp3.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [A61364514.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='a61364514.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46dc1f50>, 'Connection to a61364514.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+fatal: [EC2AMAZ-JQDLIO6.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: HTTPSConnectionPool(host='ec2amaz-jqdlio6.corp.medqia.com', port=5986): Max retries exceeded with url: /wsman (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x7f7d46d30290>, 'Connection to ec2amaz-jqdlio6.corp.medqia.com timed out. (connect timeout=30)'))", "unreachable": true}
+
+TASK [Searching updates] *********************************************************************************************************************************************************************
+fatal: [MQLYRA.corp.medqia.com]: FAILED! => {"changed": false, "filtered_updates": {}, "msg": "Failed to search for updates: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it. (Exception from HRESULT: 0x80070422)", "updates": {}}
+...ignoring
+ok: [MQMOOLA.corp.medqia.com]
+ok: [jimmy.corp.medqia.com]
+ok: [MQN-8VDT9DVUCJ9.corp.medqia.com]
+ok: [DPHPGK2.corp.medqia.com]
+ok: [DESKTOP-GV5K3SM.corp.medqia.com]
+ok: [DHYDGGK2.corp.medqia.com]
+ok: [BOFAZI.corp.medqia.com]
+ok: [DJDYBFB2.corp.medqia.com]
+ok: [BOFAMURTH.corp.medqia.com]
+ok: [9XJ8KB2.corp.medqia.com]
+ok: [HYDJGK2.corp.medqia.com]
+ok: [EC2AMAZ-JESRJ0Q.corp.medqia.com]
+ok: [EC2AMAZ-2K34HUL.corp.medqia.com]
+ok: [EC2AMAZ-5TQR7L8.corp.medqia.com]
+ok: [EC2AMAZ-9M186EG.corp.medqia.com]
+ok: [EC2AMAZ-HKLR2OH.corp.medqia.com]
+ok: [DDW0QZB2.corp.medqia.com]
+ok: [EC2AMAZ-GT3PG4T.corp.medqia.com]
+ok: [DHR1RCH2.corp.medqia.com]
+ok: [D7TWJXK2.corp.medqia.com]
+
+TASK [reboot if required] ********************************************************************************************************************************************************************
+skipping: [jimmy.corp.medqia.com]
+skipping: [MQMOOLA.corp.medqia.com]
+skipping: [MQN-8VDT9DVUCJ9.corp.medqia.com]
+fatal: [MQLYRA.corp.medqia.com]: FAILED! => {"msg": "The conditional check 'update_count.reboot_required' failed. The error was: error while evaluating conditional (update_count.reboot_required): 'dict object' has no attribute 'reboot_required'\n\nThe error appears to be in '/etc/ansible/windows-playbook/production-windows-playbook.yml': line 32, column 6, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n   - name: reboot if required\n     ^ here\n"}
+...ignoring
+skipping: [DPHPGK2.corp.medqia.com]
+skipping: [DHYDGGK2.corp.medqia.com]
+skipping: [DJDYBFB2.corp.medqia.com]
+skipping: [DDW0QZB2.corp.medqia.com]
+skipping: [DESKTOP-GV5K3SM.corp.medqia.com]
+skipping: [D7TWJXK2.corp.medqia.com]
+skipping: [BOFAZI.corp.medqia.com]
+skipping: [9XJ8KB2.corp.medqia.com]
+skipping: [BOFAMURTH.corp.medqia.com]
+skipping: [HYDJGK2.corp.medqia.com]
+skipping: [DHR1RCH2.corp.medqia.com]
+skipping: [EC2AMAZ-JESRJ0Q.corp.medqia.com]
+skipping: [EC2AMAZ-HKLR2OH.corp.medqia.com]
+skipping: [EC2AMAZ-2K34HUL.corp.medqia.com]
+skipping: [EC2AMAZ-5TQR7L8.corp.medqia.com]
+skipping: [EC2AMAZ-9M186EG.corp.medqia.com]
+skipping: [EC2AMAZ-GT3PG4T.corp.medqia.com]
+
+TASK [Install customized updates as required for MedQIA] *************************************************************************************************************************************
+fatal: [MQLYRA.corp.medqia.com]: FAILED! => {"changed": false, "filtered_updates": {}, "msg": "Failed to search for updates: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it. (Exception from HRESULT: 0x80070422)", "updates": {}}
+ok: [MQN-8VDT9DVUCJ9.corp.medqia.com]
+ok: [jimmy.corp.medqia.com]
+ok: [DPHPGK2.corp.medqia.com]
+ok: [DESKTOP-GV5K3SM.corp.medqia.com]
+ok: [MQMOOLA.corp.medqia.com]
+ok: [DJDYBFB2.corp.medqia.com]
+ok: [BOFAZI.corp.medqia.com]
+ok: [DHYDGGK2.corp.medqia.com]
+ok: [9XJ8KB2.corp.medqia.com]
+ok: [BOFAMURTH.corp.medqia.com]
+ok: [EC2AMAZ-JESRJ0Q.corp.medqia.com]
+ok: [HYDJGK2.corp.medqia.com]
+ok: [EC2AMAZ-2K34HUL.corp.medqia.com]
+ok: [DDW0QZB2.corp.medqia.com]
+ok: [EC2AMAZ-5TQR7L8.corp.medqia.com]
+ok: [EC2AMAZ-HKLR2OH.corp.medqia.com]
+ok: [EC2AMAZ-9M186EG.corp.medqia.com]
+ok: [EC2AMAZ-GT3PG4T.corp.medqia.com]
+ok: [DHR1RCH2.corp.medqia.com]
+ok: [D7TWJXK2.corp.medqia.com]
+
+TASK [updating drivers on updates] ***********************************************************************************************************************************************************
+ok: [MQMOOLA.corp.medqia.com]
+ok: [MQN-8VDT9DVUCJ9.corp.medqia.com]
+ok: [jimmy.corp.medqia.com]
+ok: [DPHPGK2.corp.medqia.com]
+ok: [DJDYBFB2.corp.medqia.com]
+ok: [DESKTOP-GV5K3SM.corp.medqia.com]
+ok: [DHYDGGK2.corp.medqia.com]
+ok: [BOFAZI.corp.medqia.com]
+ok: [BOFAMURTH.corp.medqia.com]
+ok: [9XJ8KB2.corp.medqia.com]
+ok: [EC2AMAZ-JESRJ0Q.corp.medqia.com]
+ok: [HYDJGK2.corp.medqia.com]
+ok: [EC2AMAZ-HKLR2OH.corp.medqia.com]
+ok: [EC2AMAZ-2K34HUL.corp.medqia.com]
+ok: [EC2AMAZ-5TQR7L8.corp.medqia.com]
+ok: [EC2AMAZ-9M186EG.corp.medqia.com]
+ok: [EC2AMAZ-GT3PG4T.corp.medqia.com]
+fatal: [DHR1RCH2.corp.medqia.com]: FAILED! => {"changed": false, "failed_update_count": 1, "filtered_updates": {"7d89c854-d37d-4bf7-9886-79d7208edf82": {"categories": ["Drivers"], "filtered_reason": "category_names", "id": "7d89c854-d37d-4bf7-9886-79d7208edf82", "installed": false, "kb": [], "title": "Intel Corporation - SCSIAdapter - 7/15/2019 12:00:00 AM - 16.8.3.1003"}, "b3fb7000-1397-452f-81d3-4e9515450bfc": {"categories": ["Updates", "Windows 10, version 1903 and later"], "filtered_reason": "category_names", "id": "b3fb7000-1397-452f-81d3-4e9515450bfc", "installed": false, "kb": ["4497165"], "title": "2020-01 Update for Windows 10 Version 1909 for x64-based Systems (KB4497165)"}, "b81e3aea-08da-48da-b8f7-d1f0c85faa63": {"categories": ["Updates", "Windows 10, version 1903 and later"], "filtered_reason": "category_names", "id": "b81e3aea-08da-48da-b8f7-d1f0c85faa63", "installed": false, "kb": ["4537572"], "title": "2020-02 Cumulative Update for .NET Framework 3.5 and 4.8 for Windows 10 Version 1909 for x64 (KB4537572)"}, "d0478bde-b17d-4cd7-9cbc-939c62b62c96": {"categories": ["Office 2013", "Service Packs"], "filtered_reason": "category_names", "id": "d0478bde-b17d-4cd7-9cbc-939c62b62c96", "installed": false, "kb": ["2850036"], "title": "Service Pack 1 for Microsoft Office 2013 (KB2850036) 64-Bit Edition"}}, "found_update_count": 1, "installed_update_count": 0, "msg": "Failed to install one or more updates", "reboot_required": false, "updates": {"6d1e3c9a-29cd-425c-a0fa-913d8c284d8b": {"categories": ["Critical Updates", "Office 2013"], "failed": true, "failure_hresult_code": -2145124307, "id": "6d1e3c9a-29cd-425c-a0fa-913d8c284d8b", "installed": false, "kb": ["2899522"], "title": "Update for Microsoft Office 2013 (KB2899522) 64-Bit Edition"}}}
+ok: [D7TWJXK2.corp.medqia.com]
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: InvalidCredentialsError: the specified credentials were rejected by the server
+fatal: [DDW0QZB2.corp.medqia.com]: FAILED! => {"msg": "Unexpected failure during module execution.", "stdout": ""}
+
+TASK [Ensure WinRM starts when the system has settled and is ready to work reliably] *********************************************************************************************************
+fatal: [jimmy.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [MQN-8VDT9DVUCJ9.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [MQMOOLA.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [DPHPGK2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [DJDYBFB2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [DHYDGGK2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [DESKTOP-GV5K3SM.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [D7TWJXK2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [BOFAZI.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [BOFAMURTH.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [9XJ8KB2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [HYDJGK2.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [EC2AMAZ-JESRJ0Q.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [EC2AMAZ-HKLR2OH.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [EC2AMAZ-2K34HUL.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [EC2AMAZ-5TQR7L8.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [EC2AMAZ-9M186EG.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+fatal: [EC2AMAZ-GT3PG4T.corp.medqia.com]: UNREACHABLE! => {"changed": false, "msg": "kerberos: authGSSClientStep() failed: (('Unspecified GSS failure.  Minor code may provide more information', 851968), ('Ticket expired', -1765328352))", "unreachable": true}
+
+PLAY RECAP ***********************************************************************************************************************************************************************************
+9XJ8KB2.corp.medqia.com    : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+A61364514.corp.medqia.com  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+A64765070.corp.medqia.com  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+A68574554.corp.medqia.com  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+BOFABAHAM.corp.medqia.com  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+BOFAMURTH.corp.medqia.com  : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+BOFAZI.corp.medqia.com     : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+D5XJZSD2.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+D7TWJXK2.corp.medqia.com   : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+D7TWLXK2.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+D8PF4JL2.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+D8YW8JH2.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+D8YWBJH2.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+D9L58382.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DDW0QZB2.corp.medqia.com   : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+DESKTOP-85AEUBB.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DESKTOP-88C426G.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DESKTOP-9FJQFAK.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DESKTOP-GV5K3SM.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+DESKTOP-LAD9G6Q.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DESKTOP-LAFJTAH.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DESKTOP-R19N1Q4.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DESKTOP-RD27G1U.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DESKTOP-VDB7AUM.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DF2NJQH2.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DHR1RCH2.corp.medqia.com   : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+DHVRRR52.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+DHYDGGK2.corp.medqia.com   : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+DJDYBFB2.corp.medqia.com   : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+DPHPGK2.corp.medqia.com    : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+EC2AMAZ-2K34HUL.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+EC2AMAZ-5TQR7L8.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+EC2AMAZ-9M186EG.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+EC2AMAZ-GT3PG4T.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+EC2AMAZ-HKLR2OH.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+EC2AMAZ-JESRJ0Q.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+EC2AMAZ-JQDLIO6.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+HYDJGK2.corp.medqia.com    : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+LD-MJ04WHL3.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+LTP-COORD1.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+LTP-bferracane.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+LTP-colove.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+LTP-hclem.corp.medqia.com  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+LTP-katjohnson.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQHAUMEA.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQLYRA.corp.medqia.com     : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=2   
+MQMOOLA.corp.medqia.com    : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+MQN-55LFH9DI0DN.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQN-64ONKQGL30Q.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQN-8VDT9DVUCJ9.corp.medqia.com : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+MQN-A08717088.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQN-Conference.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQN-NHFUTR7.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQN-S2FA14DAA7H.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+MQNIX.corp.medqia.com      : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+WIN-ES3L5DAS5CJ.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+WIN-JMVFIU6BPRD.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+WIN-Q0QJ2LCCUR4.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+avcocnlp3.corp.medqia.com  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+avcoimla.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+avcoimlp.corp.medqia.com   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+avcoimlp4.corp.medqia.com  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+codetwo.corp.medqia.com    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+jimmy.corp.medqia.com      : ok=4    changed=0    unreachable=1    failed=0    skipped=1    rescued=0    ignored=0   
+testcomplete.corp.medqia.com : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
