@@ -15,6 +15,6 @@
 * pip install boto3 (command for windows)
 ```
 ## Run the script:
-* region = us-west-2
+* region = your_region
 * python on_demand_startup_instances.py
 
