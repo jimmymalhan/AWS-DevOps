@@ -8,8 +8,7 @@
 
 ## Projects:
 ```bash
-start or stop server with python 
-Ansible for Patch Management
+Click on the Projects to get going...
 ```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
