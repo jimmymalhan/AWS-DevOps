@@ -1,6 +1,5 @@
 import boto3,os,sys
 import botocore.session
-from botocore.exceptions import ClientError
 
 def con_to_aws():
     client = boto3.client('ecs')
