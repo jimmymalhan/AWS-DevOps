@@ -8,7 +8,7 @@
 
 ## Projects:
 ```bash
-Click on the Projects to get going...
+Click on the Projects to view the code related to the resource/tool.
 ```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
