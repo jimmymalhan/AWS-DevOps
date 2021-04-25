@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-west-2"
-  access_key = "" # can be passed as environment variable
-  secret_key = ""
+  access_key = "AKIA2ZTWSYO3ABYNAPES" # can be passed as environment variable
+  secret_key = "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"
 }
 
 # how to search for module - 
@@ -148,8 +148,9 @@ resource "aws_instance" "web-server-instance" { # "aws_instance" "foo"
   }
 }
 
-output "server_private_ip" {
-  value = aws_instance.web-server-instance.private_ip
+# based on creation of ec2 server | resource "aws_instance" "web-server-instance"
+output "server_private_ip" { # output "foo"
+  value = aws_instance.web-server-instance.private_ip # value = aws_instance.<server_name_created>.<required_diplay_resource>
 
 }
 
