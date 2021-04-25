@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-west-2"
-  access_key = "AKIA2ZTWSYO3ABYNAPES" # can be passed as environment variable
-  secret_key = "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"
+  access_key = "" # can be passed as environment variable
+  secret_key = ""
 }
 
 # how to search for module - 
