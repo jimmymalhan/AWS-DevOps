@@ -129,7 +129,7 @@ resource "aws_instance" "web-server-instance" { # "aws_instance" "foo"
   ami               = "ami-02701bcdc5509e57b"
   instance_type     = "t2.micro"
   availability_zone = "us-west-2a" 
-  key_name          = "main- key" # add your keypair
+  key_name          = "main- key" # add your keypair # create it
 
   network_interface {
     device_index         = 0
