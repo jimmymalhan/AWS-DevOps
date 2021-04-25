@@ -1,12 +1,8 @@
 provider "aws" {
-  region = "us-west-2"
-  access_key = "" # can be passed as environment variable
+  region = "your_region"
+  access_key = ""
   secret_key = ""
 }
-
-# how to search for module - 
-# terraform aws <module name>
-# terraform aws vpc
 
 # # 1. Create vpc
 
@@ -21,12 +17,10 @@ resource "aws_vpc" "prod-vpc" {
 
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.prod-vpc.id # aws_vpc.foo.id
-
-
 }
 # 3. Create Custom Route Table
 
-resource "aws_route_table" "prod-route-table" { # "aws_route_table" "foo"
+resource "aws_route_table" "prod-route-table" {
   vpc_id = aws_vpc.prod-vpc.id #aws_vpc.foo.id
 
   route {
@@ -44,36 +38,52 @@ resource "aws_route_table" "prod-route-table" { # "aws_route_table" "foo"
   }
 }
 
+variable "subnet_prefix" {
+  description = "cidr block for the subnet"
+  # default = "10.0.66.0/24" # if the value of the variable is not assigned then it uses default value
+  type = list # can be used any for boolean,list etc..
+}
+
 # 4. Create a Subnet 
 
-resource "aws_subnet" "subnet-1" { # "aws_subnet" "foo"
+resource "aws_subnet" "subnet-1" {
   vpc_id            = aws_vpc.prod-vpc.id # aws_vpc.foo.id
-  cidr_block        = "10.0.1.0/24"
+  cidr_block        = var.subnet_prefix[0].cidr_block # first object in a list from variable file - "10.0.1.0/24"
   availability_zone = "us-west-2a" # important to hardcode it
 
   tags = {
-    Name = "prod-subnet"
+    Name = var.subnet_prefix[0].name
+  }
+}
+
+resource "aws_subnet" "subnet-2" {
+  vpc_id            = aws_vpc.prod-vpc.id # aws_vpc.foo.id
+  cidr_block        = var.subnet_prefix[1].cidr_block # 2nd object in a list from variable file - "10.0.2.0/24"
+  availability_zone = "us-west-2a" # important to hardcode it
+
+  tags = {
+    Name = var.subnet_prefix[0].name
   }
 }
 
 # 5. Associate subnet with Route Table
 resource "aws_route_table_association" "a" {
   subnet_id      = aws_subnet.subnet-1.id # aws_subnet.foo.id
-  route_table_id = aws_route_table.prod-route-table.id #copy from step 3 "aws_route_table" "prod-route-table"
+  route_table_id = aws_route_table.prod-route-table.id
 }
 
 # 6. Create Security Group to allow port 22,80,443
-resource "aws_security_group" "allow_web" { # "aws_security_group" "foo"
-  name        = "allow_web_traffic" # "foo"
+resource "aws_security_group" "allow_web" {
+  name        = "allow_web_traffic"
   description = "Allow Web inbound traffic"
-  vpc_id      = aws_vpc.prod-vpc.id # copy from step 4 aws_vpc.prod-vpc.id
+  vpc_id      = aws_vpc.prod-vpc.id
 
   ingress {
     description = "HTTPS"
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # customize to your own ip too
+    cidr_blocks = ["0.0.0.0/0"]
     # ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
   }
   ingress {
@@ -105,7 +115,7 @@ resource "aws_security_group" "allow_web" { # "aws_security_group" "foo"
 
 # 7. Create a network interface with an ip in the subnet that was created in step 4
 
-resource "aws_network_interface" "web-server-nic" { # "aws_network_interface" "foo" {
+resource "aws_network_interface" "web-server-nic" {
   subnet_id       = aws_subnet.subnet-1.id # copy from step 4 aws_subnet.foo.id
   private_ips     = ["10.0.1.50"] # ip address within your subnet
   security_groups = [aws_security_group.allow_web.id] # copied from step 6
@@ -125,11 +135,11 @@ output "server_public_ip" {
 
 # 9. Create Ubuntu server and install/enable apache2
 
-resource "aws_instance" "web-server-instance" { # "aws_instance" "foo"
+resource "aws_instance" "web-server-instance" {
   ami               = "ami-02701bcdc5509e57b"
   instance_type     = "t2.micro"
   availability_zone = "us-west-2a" 
-  key_name          = "main- key" # add your keypair # create it
+  key_name          = "main- key"
 
   network_interface {
     device_index         = 0
@@ -148,8 +158,7 @@ resource "aws_instance" "web-server-instance" { # "aws_instance" "foo"
   }
 }
 
-# based on creation of ec2 server | resource "aws_instance" "web-server-instance"
-output "server_private_ip" { # output "foo"
+output "server_private_ip" {
   value = aws_instance.web-server-instance.private_ip # value = aws_instance.<server_name_created>.<required_diplay_resource>
 
 }
