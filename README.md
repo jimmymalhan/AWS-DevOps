@@ -2,9 +2,10 @@
 
 ```  Projects are listed in the folders  ```
 
-## Basic Requirements on OS
+## Basic Requirements on OS with brew as package manager
 * pip
 * python
+* tfenv
 
 ## Projects:
 ```bash
